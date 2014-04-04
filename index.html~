@@ -6,7 +6,7 @@ aquí llamamos los js para para realziar las conexiones
 -->
 	<script src="js/angular.js"></script>
 	<script src="js/celulares.js"></script>
-	<script src="js/angular-route.min.js"></script>
+	<script src="angular-route.min.js"></script>
 	<script type="text/javascript" src="js/angular_resource.js"></script>
 <!---
 Ingresamos el titulo de nuestro index, aliniandolo al centro y de color rojo

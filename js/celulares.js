@@ -1,5 +1,5 @@
 //declaramos la variable 2celular" de tipo angular.module, que servira como modulador de nuestra aplicacion
-var celulares = angular.module("celulares", ['ngRoute',"ngResource"]);
+var celulares = angular.module("celulares", ['ngRoute']);
   
 
 celulares.config(function($routeProvider) {
@@ -26,35 +26,43 @@ celulares.config(function($routeProvider) {
 })
 
 celulares.controller("nokiaC", function($scope){
-	$scope.imagen = "estoy en nokia";
+	$scope.imagen = "ingrese a nokia";
 });
 
-celulares.controller("motorolaC", function($scope){
-	$scope.imagen = "estoy en motorola";
-});
+celulares.controller("motorolaC", function($scope,$http)
+	{
+		$scope.imagen = "ingrese a motorola";	
+    	//hacemos uso de $http para obtener los datos de la appi
+    	$http.post("http://api-a.vime.com.co/login/?username=oscar.jimenez&password=mett").success(function 			(data) 
+		{
+			//Convert data to array.
+        	//datos lo tenemos disponible en la vista gracias a $scope
+        	$scope.datos = data;
+		 }			)
+	});
 
 celulares.controller("samsungC", function($scope){
-	$scope.imagen = "estoy en samsung1";
+	$scope.imagen = "ingrese a samsung1";
 });
 
-//con dataResource inyectamos la factoría
-celulares.controller("appController", function ($scope, $http, dataResource) {
-    //hacemos uso de $http para obtener los datos del json
-    $http.post("http://api-a.vime.com.co/login/?username=oscar.jimenez&password=mett").success(function (data) {
-        //Convert data to array.
-        //datos lo tenemos disponible en la vista gracias a $scope
-        $scope.datos = data;
-    });
-    //datosResource lo tenemos disponible en la vista gracias a $scope
-    $scope.datosResource = dataResource.post();
-})
-//de esta forma tan sencilla consumimos con $resource en AngularJS
-celulares.factory("dataResource", function ($resource) {
-    return $resource("http://api-a.vime.com.co/login/", //la url donde queremos consumir
-        {}, //aquí podemos pasar variables que queramos pasar a la consulta
-        //a la función get le decimos el método, y, si es un array lo que devuelve
-        //ponemos isArray en true
-        { post: { method: "POST", isArray: true }
-    })
-})
- 
+	//con dataResource inyectamos la factoría
+celulares.controller("appController", function ($scope, $http) 
+	{
+		$scope.enviardatos = function()
+			{
+				if (!$scope.nombretext||!$scope.passwordtext) {
+					alert ("los campos estan vacios")
+					}
+				$scope.imagen = "estoy en nokia";
+			
+    	//hacemos uso de $http para obtener los datos del json
+    	$http.post("http://api-a.vime.com.co/login/?username="+ $scope.nombretext+ "&password=" + 					$scope.passwordtext).success(function (data) 
+		{
+			//Convert data to array.
+        	//datos lo tenemos disponible en la vista gracias a $scope
+        	$scope.datos = data;
+		 }									)
+    		}	
+	}				)
+
+

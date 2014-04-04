@@ -1,37 +1,32 @@
 <IMG src="img/nokia.jpg" /> 
-hola {{imagen}}
-    <form>
-    <div class="form-group">
-    <input type="text" class="form-control input-lg text-center"
-    placeholder="Ingrese su usuario por favor"
-    ng-model="nombre">
 
-    </div>
-<div class="form-group">
-    <input type="password" class="form-control input-lg text-center"
-    placeholder="Ingrese su clave"
-    ng-model="formDataPas.text">
-    </div>
-    <button class="btn btn-primary btn-lg" ng-click="createTodo()">Enviar</button>
-    </form>
-<!--añadimos aquí el controlador appController ya que será donde mostremos los datos-->
-        <div class="row" ng-controller="appController">
-            <h1 class="subheader">Consumir un json con $http en AngularJS</h1>
+    <form>
+		<div class="form-group">
+    		<input type="text" class="form-control input-lg text-center"
+    			placeholder="Ingrese su usuario por favor"
+			    ng-model="nombretext">
+		</div>
+		<div class="form-group">
+		    <input type="password" class="form-control input-lg text-center"
+			    placeholder="Ingrese su clave"
+    			ng-model="passwordtext">
+		</div>
+     
+	</form>
+	<!--añadimos aquí el controlador appController ya que será donde mostremos los datos-->
+	<div class="row" ng-controller="appController">
+		<button ng-click="enviardatos()">enviar</button>
+			hola {{imagen}}
+			{{cedula}}
+            <h1 class="subheader">Datos del usuario</h1>
             <ul class="panel callout radius">
-				{{datos}}
-				<p><p>Nombre: {{datos.username}}  ID: {{datos.user_id}} cargo: {{datos.cargo}} Total mensajes: {{datos.totalMensajesRecibidos}}</p></p>
-<!----
-                <li ng-repeat="data in datos">
-                    <p><p>Id: {{data.username}} Nombre: {{data.user_id}} Profesión: {{data.totalMensajesRecibidos}}</p></p>
-                </li>
------>
+				<p><p>Usuario: {{datos.username}} </p> 
+				<p> Nombre: {{datos.descripcion.nombre}}  </p>
+				<p> Cedula: {{datos.descripcion.cedula}}  </p>
+				<p>ID: {{datos.user_id}} 	</p>			
+				<p>Total Mensajes Recibidos: {{datos.totalMensajesRecibidos}} </p>
+				<p> Cargo: {{datos.descripcion.cargo}}  </p>
+				<p> Correo: {{datos.descripcion.correo}}  </p>
             </ul>
- 
-            <h1 class="subheader">Consumir un json con $resource en AngularJS</h1>
-            <ul class="panel callout radius">
-                <li ng-repeat="data in datosResource">
-                    <p><p>Id: {{data.username}} Nombre: {{data.user_id}} Profesión: {{data.totalMensajesRecibidos}}</p></p>
-                </li>
-            </ul>
-        </div>
-            </ul>
+	</div>
+        
