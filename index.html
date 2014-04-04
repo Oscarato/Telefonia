@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="celulares">
+<head>
+ <!---
+aquí llamamos los js para para realziar las conexiones
+-->
+	<script src="js/angular.js"></script>
+	<script src="js/celulares.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.4/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular_resource.js"></script>
+<!---
+Ingresamos el titulo de nuestro index, aliniandolo al centro y de color rojo
+-->
+	<title>Celulares</title>
+<div align = "center" ><h1><font color="red">Seleccione una categoria</font></h1></div> 
+	
+</head>
+<body >
+
+<!---
+aquí enunciamos los links para llamar los templates, les agregamos nombre con letra de color azul
+-->
+<hr color="blue" size=3>
+		<a href="#nokia1">nokia</a>
+		<a href="#motorola1">motorola</a>
+		<a href="#samsung1">samsung</a>
+
+<hr color="blue" size=3>
+<!---
+En esta parte agregamos el ng-view para visualizar los templates que llamamos
+-->
+	<div ng-view></ng-view>
+</body>
+</html>
