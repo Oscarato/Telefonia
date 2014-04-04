@@ -1,0 +1,29 @@
+<IMG src="img/logueo.jpg" /> 
+
+    <form>
+		<div class="form-group">
+    		<input type="text" class="form-control input-lg text-center"
+    			placeholder="Ingrese su usuario por favor"
+			    ng-model="nombretext">
+		</div>
+		<div class="form-group">
+		    <input type="password" class="form-control input-lg text-center"
+			    placeholder="Ingrese su clave"
+    			ng-model="passwordtext">
+		</div>
+     
+	</form>
+	<!--añadimos aquí el controlador appController ya que será donde mostremos los datos-->
+	<div class="row" ng-controller="logueoC">
+		<button ng-click="enviardatos()">enviar</button>
+			<h1 class="subheader">Datos del usuario</h1>
+            <ul class="panel callout radius">
+				<p><p>Usuario: {{datos.username}} </p> 
+				<p> Nombre: {{datos.descripcion.nombre}}  </p>
+				<p> Cedula: {{datos.descripcion.cedula}}  </p>
+				<p>ID: {{datos.user_id}} 	</p>			
+				<p>Total Mensajes Recibidos: {{datos.totalMensajesRecibidos}} </p>
+				<p> Cargo: {{datos.descripcion.cargo}}  </p>
+				<p> Correo: {{datos.descripcion.correo}}  </p>
+            </ul>
+	</div>

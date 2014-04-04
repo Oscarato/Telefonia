@@ -1,0 +1,6 @@
+<IMG src="img/estado.jpg"/> 
+<p>{{datos.notificaciones}}</p>
+
+{{datos.totalMensajesRecibidos}}
+
+

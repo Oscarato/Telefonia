@@ -1,4 +1,4 @@
-<IMG src="img/nokia.jpg" /> 
+<IMG src="img/logueo.jpg" /> 
 
     <form>
 		<div class="form-group">
@@ -14,19 +14,16 @@
      
 	</form>
 	<!--añadimos aquí el controlador appController ya que será donde mostremos los datos-->
-	<div class="row" ng-controller="appController">
+	<div class="row" ng-controller="logueoC">
 		<button ng-click="enviardatos()">enviar</button>
-			hola {{imagen}}
-			{{cedula}}
-            <h1 class="subheader">Datos del usuario</h1>
+			<h1 class="subheader">Datos del usuario</h1>
             <ul class="panel callout radius">
 				<p><p>Usuario: {{datos.username}} </p> 
 				<p> Nombre: {{datos.descripcion.nombre}}  </p>
 				<p> Cedula: {{datos.descripcion.cedula}}  </p>
 				<p>ID: {{datos.user_id}} 	</p>			
-				<p>Total Mensajes Recibidos: {{datos.totalMensajesRecibidos}} </p>
 				<p> Cargo: {{datos.descripcion.cargo}}  </p>
 				<p> Correo: {{datos.descripcion.correo}}  </p>
+ 
             </ul>
 	</div>
-        

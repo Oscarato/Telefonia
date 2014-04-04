@@ -1,5 +1,4 @@
-<IMG src="img/motorola.jpg"/> 
-hola {{imagen}}
+<IMG src="img/estado.jpg"/> 
 <form>
     <div class="form-group">
     <input type="text" class="form-control input-lg text-center"
