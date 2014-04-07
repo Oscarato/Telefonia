@@ -1,12 +1,17 @@
+<div align="right">
+	<a href="#logueo" >Salir</a></hr>
+</div>
 <hr>
-<a href="#Estado">Ver Estado</a></hr>
-<a href="#Mensaje">Enviar mensaje</a>
-<hr></hr>
+<div align="center">
+	<a href="#Estado"><img src="img/boton.png"></a>
+	<a href="#Mensaje"><img src="img/boton2.jpeg"></a>
+</div>
+<hr>
 <br> Bienvenido... {{nombre}}
+
 <br>
 <br>
 <IMG src="img/saludo.jpg"/> 
-
 <br> Su Cedula es: {{cedula}}
 <br>
 <br>

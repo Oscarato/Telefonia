@@ -1,8 +1,16 @@
-<IMG src="img/estado.jpg"/> 
-<p>Notificaciones Recibidas: {{datos.notificaciones}}</p>
-
-Mensajes recibidos: {{datos.totalMensajesRecibidos}}
-<br>
+<div align="right">
+	<a href="#logueo" >Salir</a></hr>
 <br>
 <a href="#Bienvenido">Regresar</a>
+</div>
+<hr>
+	<a href="#Estado"><img src="img/boton.png"></a>
+	<a href="#Mensaje"><img src="img/boton2.jpeg"></a>
+<hr>
+<br>
+<IMG src="img/estado.jpg"/> 
+<br>
+<p>Notificaciones Recibidas: {{datos.notificaciones}}</p>
+<p>Mensajes recibidos: {{datos.totalMensajesRecibidos}}</p>
+
 

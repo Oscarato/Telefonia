@@ -1,7 +1,16 @@
+<div align="right">
+	<a href="#logueo" >Salir</a></hr>
+<br>
+<a href="#Bienvenido">Regresar</a>
+</div>
+<hr>
+	<a href="#Estado"><img src="img/boton.png"></a>
+	<a href="#Mensaje"><img src="img/boton2.jpeg"></a>
+<hr>
+<br>
 <IMG src="img/mensaje.jpg"/> 
 <br>
 {{imagen}}
-{{logi}}
 <br>
 <br>
-<a href="#Bienvenido">Regresar</a>
+

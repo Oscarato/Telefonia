@@ -1,7 +1,6 @@
 //declaramos la variable 2celular" de tipo angular.module, que servira como modulador de nuestra aplicacion
 
 var mett = angular.module("mett", ['ngRoute']);
-  $scope.logi = "salir"
 
 mett.config(function($routeProvider) {
   $routeProvider
