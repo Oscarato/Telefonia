@@ -1,4 +1,7 @@
 <IMG src="img/mensaje.jpg"/> 
-	
-{{Id}}
-
+<br>
+{{imagen}}
+{{logi}}
+<br>
+<br>
+<a href="#Bienvenido">Regresar</a>

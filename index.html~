@@ -11,7 +11,9 @@ aquí llamamos los js para para realziar las conexiones
 <!---
 Ingresamos el titulo de nuestro index, aliniandolo al centro y de color rojo
 -->
-
+<div align="right">
+	<a href="#logueo" >Salir</a></hr>
+</div>
 	<title>Bienvenido a Mett</title>
 <div align = "center" ><h1><font color="0080FF">Bienvenido a Mett</font></h1></div> 
 </head>

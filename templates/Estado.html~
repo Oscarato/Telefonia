@@ -1,6 +1,8 @@
 <IMG src="img/estado.jpg"/> 
-<p>{{datos.notificaciones}}</p>
+<p>Notificaciones Recibidas: {{datos.notificaciones}}</p>
 
-{{datos.totalMensajesRecibidos}}
-
+Mensajes recibidos: {{datos.totalMensajesRecibidos}}
+<br>
+<br>
+<a href="#Bienvenido">Regresar</a>
 

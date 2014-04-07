@@ -1,4 +1,5 @@
 //declaramos la variable 2celular" de tipo angular.module, que servira como modulador de nuestra aplicacion
+
 var mett = angular.module("mett", ['ngRoute']);
   
 
@@ -7,7 +8,6 @@ mett.config(function($routeProvider) {
 	.when("/Logueo", {
 		controller:"logueoC",
 		templateUrl:"templates/Logueo.html"
-		
     })
 
 	.when("/Estado", {
@@ -20,8 +20,13 @@ mett.config(function($routeProvider) {
       templateUrl:"templates/Mensaje.html"
     })
 
+	.when("/Bienvenido", {
+      controller:"bienvenidoC",
+      templateUrl:"templates/bienvenido.html"
+    })
+
 	.otherwise({
-      redirectTo:"logueo"
+      redirectTo:"/Logueo"
     })
 })
 

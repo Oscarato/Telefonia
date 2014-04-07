@@ -1,0 +1,14 @@
+<hr>
+<a href="#Estado">Ver Estado</a></hr>
+<a href="#Mensaje">Enviar mensaje</a>
+<hr></hr>
+<br> Bienvenido... {{nombre}}
+<br>
+<br>
+<IMG src="img/saludo.jpg"/> 
+
+<br> Su Cedula es: {{cedula}}
+<br>
+<br>
+<br> Su cargo es: {{cargo}}
+
