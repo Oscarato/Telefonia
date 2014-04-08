@@ -22,7 +22,7 @@ mett.controller("logueoC", function($scope,$http,$location)
 							 }						)
 						.error(function (status)
 							{
-								alert("Usuario Ó Clave Incorrecto")
+								alert("Usuario o Clave Incorrecto")
 								$scope.status = status;
 							}						)
     						}

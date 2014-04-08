@@ -1,5 +1,5 @@
 <div align="right">
-	<a href="#logueo" >Salir</a></hr>
+<a href="#logueo" >Salir</a></hr>
 <br>
 <a href="#Bienvenido">Regresar</a>
 </div>
@@ -15,4 +15,21 @@
 {{imagen}}
 <br>
 <br>
-
+<form ng-controller="mensajeC">
+    <fieldset>
+        <legend>Eviar Mensaje:</legend>
+        <label>De:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+										<input type="text" name="De"  ng-model="DeText"/>
+										<br>
+										<label>Para:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+										<input type="text" name="Para"  ng-model="ParaText"/>
+										<br>
+										<br>
+										<label>Mensaje:</label>
+										<br>
+										<textarea class="largo" name="Mensaje" cols="45" rows="5" ng-amodel="MessageText"></textarea> 
+        <span>{{MessageStatus}}</span>
+        <br />
+        <button ng-click="Enviar()">Enviar</button>
+    </fieldset>               
+</form>

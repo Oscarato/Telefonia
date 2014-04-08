@@ -4,8 +4,10 @@
 <a href="#Bienvenido">Regresar</a>
 </div>
 <hr>
+	<div align="center">
 	<a href="#Estado"><img src="img/boton.png"></a>
 	<a href="#Mensaje"><img src="img/boton2.jpeg"></a>
+</div>
 <hr>
 <br>
 <IMG src="img/mensaje.jpg"/> 
@@ -13,4 +15,21 @@
 {{imagen}}
 <br>
 <br>
-
+<form>
+    <fieldset>
+        <legend>Mensaje:</legend>
+        <label>De:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" name="De"  ng-model="DeText"/>
+		<br>
+		<label>Para:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" name="Para"  ng-model="ParaText"/>
+		<br>
+		<br>
+		<label>Mensaje:</label>
+		<br>
+		<textarea class="largo" name="Mensaje" cols="45" rows="5" ng-amodel="MessageText"></textarea> 
+        <span>{{MessageStatus}}</span>
+        <br />
+        <button ng-click="Send()">Enviar</button>
+    </fieldset>               
+</form>

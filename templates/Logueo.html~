@@ -2,11 +2,12 @@
 <div class="row" ng-controller="logueoC">
 	<form>
 		<table align="center" border="2">
+			<br><br><br><br><br><br><br><br><br>
 			<td><div align="center">
 					<IMG src="img/logueo.jpg" /> 
 			</div></td>
 			<div class="form-group">
-				<td><input type="text" class="form-control input-lg text-center"
+				<td>Usuario<br><input type="text" class="form-control input-lg text-center"
 					placeholder="Ingrese su usuario"
 					ng-model="nombretext" >
 			</div>
