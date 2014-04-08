@@ -51,13 +51,16 @@ mett.controller("mensajeC", function($scope, $http){
 				cookie = localStorage.getItem('cookie');
 				Id = localStorage.getItem('id');
 				
+
+				
+
 				$scope.Enviar = function () {
 				Cuerpo = $scope.MessageText
 				Asunto = $scope.DeText
 				Para = $scope.ParaText
 				$scope.Mensajenvio = 
   			  {
-  				  "autor": 1001, 
+  				  "autor": Para, 
   				  "titulo": Asunto, 
   				  "cuerpo": Cuerpo, 
   				  "tipo": "informacion"

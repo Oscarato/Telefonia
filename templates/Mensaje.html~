@@ -39,5 +39,5 @@
        <br>
         <span>El mensaje con asunto: {{MessageStatus.titulo}}.</span>
        <br>
-        <span>El mensaje contiene enviado: {{MessageStatus.cuerpo}}</span>             
+        <span>El mensaje contiene: {{MessageStatus.cuerpo}}</span>             
 </form>
