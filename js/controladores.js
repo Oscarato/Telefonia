@@ -46,30 +46,35 @@ mett.controller("estadoC", function($scope,$http)
 
 
 mett.controller("mensajeC", function($scope, $http){
-
-				$scope.imagen = "ingrese a mensajes";
 				
-				$scope.Mensajenvio = 
-    {
-    "autor": 1001, 
-    "titulo": "Mensaje", 
-    "cuerpo": "Mensaje", 
-    "tipo": "informacion"
-}
+				$scope.imagen = "ingrese a mensajes";
 				cookie = localStorage.getItem('cookie');
 				Id = localStorage.getItem('id');
 				
 				$scope.Enviar = function () {
+				Cuerpo = $scope.MessageText
+				Asunto = $scope.DeText
+				Para = $scope.ParaText
+				$scope.Mensajenvio = 
+  			  {
+  				  "autor": Para, 
+  				  "titulo": Asunto, 
+  				  "cuerpo": Cuerpo, 
+  				  "tipo": "informacion"
+				}
         $http({
             url: "http://api-a.vime.com.co/mensaje/?user_id="+Id+"&cookie="+cookie,
             method: "POST",
-            data: { "Mensaje": $scope.Mensajenvio }
+            data: $scope.Mensajenvio
         }).success(function (data, status, headers, config) {
-            $scope.MessageStatus  = data
+            $scope.MessageStatus  = $scope.Mensajenvio
         }).error(function() {
             $scope.MessageStatus = 'Mensaje no enviado';
+            
         });
 				}
+
+				
 })
 
 
